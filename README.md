@@ -19,8 +19,8 @@ GET/POST|http://localhost:3000/api/registration
 #### Required data
 Type | Parameter | Value
 ------------ | ------------- | -------------
-string | email | *"email"*
-string | password | *"password"*
+string | email | *"example@mail.ko"*
+string | password | *"Qwerty123"*
 You can add any parameters to the object
 
 #### Example (POST body)
@@ -34,3 +34,18 @@ You can add any parameters to the object
 
 #### Example (GET url)
 http://localhost:3000/api/registration/?email=example@mail.ko&password=Qwerty123&restData=restData
+
+#### Response
+200 OK
+```javascript
+{
+  "result": true,
+  "data": {
+    "_id": "5b1723a855cc2403d0c9cb40",
+    "email": "example@mail.ko",
+    "restData": "restData",
+    "__v": 0
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+}
+```
