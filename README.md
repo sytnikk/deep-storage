@@ -5,20 +5,30 @@ It is a flexible API to help fast start your project.
 
 
 
-### *Registration*
+## *Registration*
 
 
 
 Create a new user
 
-##### Request
+#### Request
 Method | URL
 ------------ | -------------
 GET/POST|http://localhost:3000/api/registration
 
-##### Required data
+#### Required data
 Type | Parameter | Value
 ------------ | ------------- | -------------
 string | email | *"email"*
 string | password | *"password"*
+You can add any parameters to the object
 
+#### Example (POST body)
+
+```javascript
+{
+  email: "example@mail.ko",
+  password: "Qwerty123",
+  restData: "restData"
+}
+```
