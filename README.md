@@ -14,7 +14,7 @@ GET/POST|http://localhost:3000/api/registration
 
 ### Required data
 Type | Parameter | Value
------------- | -------------
+------------ | ------------- | -------------
 string | email | <email>
 string | password | <password>
 
