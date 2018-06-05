@@ -24,7 +24,6 @@ string | password | *"password"*
 You can add any parameters to the object
 
 #### Example (POST body)
-
 ```javascript
 {
   email: "example@mail.ko",
@@ -32,3 +31,6 @@ You can add any parameters to the object
   restData: "restData"
 }
 ```
+
+#### Example (GET url)
+http://localhost:3000/api/registration/?email=example@mail.ko&password=Qwerty123&restData=restData
