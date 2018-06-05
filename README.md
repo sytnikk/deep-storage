@@ -1,9 +1,9 @@
 # Deep storage - NodeJS, MongoDB
 It is a flexible API to help fast start your project.
 
-## API Methods
+# API Methods
 
-### Registration
+## Registration
 
 Create a new user
 
