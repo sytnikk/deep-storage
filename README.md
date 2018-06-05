@@ -7,6 +7,4 @@ It is a flexible API to help fast start your project.
 
 URL | Data
 ------------ | -------------
-localhost:3000/api/registration|```json {
-  "result": true
-} ```
+localhost:3000/api/registration|```json { "result": true} ```
