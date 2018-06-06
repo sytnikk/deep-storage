@@ -17,8 +17,8 @@ const signToken = function({name, email, password, _id, role}, secret, time) {
 
 
 
-const register = function(req, res){
-    passport.authenticate('local-register', {session: false}, (err, user, info) => {
+const registration = function(req, res){
+    passport.authenticate('local-registration', {session: false}, (err, user, info) => {
           if (err || !user) {
               return res.status(400).json({result: false, message: info.message});
           }
@@ -61,10 +61,10 @@ const login = function(req, res){
 
 
 
-auth.post('/register', register);
+auth.post('/registration', registration);
 auth.post('/login', login);
 
-auth.get('/register', register);
+auth.get('/registration', registration);
 auth.get('/login', login);
 
 module.exports = auth;

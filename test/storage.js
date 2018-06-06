@@ -23,8 +23,8 @@ let userData = {
 
 
 describe('API flow', () => {
-	it('Register new user', (done) => {
-		chai.request(server).post('/api/register').send(userData)
+	it('Registration new user', (done) => {
+		chai.request(server).post('/api/registration').send(userData)
 			.end((err, res) => {
 				res.should.have.status(200);
 				res.body.should.be.a('object');
