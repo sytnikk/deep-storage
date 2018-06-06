@@ -58,3 +58,49 @@ http://localhost:3000/api/registration/?email=example@mail.ko&password=Qwerty123
 }
 ```
 
+## *Login*
+
+#### Request
+Method | URL
+------------ | -------------
+GET/POST|http://localhost:3000/api/login
+
+#### Required data
+Type | Parameter | Value
+------------ | ------------- | -------------
+string | email | *"example@mail.ko"*
+string | password | *"Qwerty123"*
+
+#### Example (POST body)
+```javascript
+{
+  email: "example@mail.ko",
+  password: "Qwerty123"
+}
+```
+
+#### Example (GET url)
+http://localhost:3000/api/login/?email=example@mail.ko&password=Qwerty123
+
+#### Response
+200
+```javascript
+{
+  "result": true,
+  "data": {
+    "_id": "5b1723a855cc2403d0c9cb40",
+    "email": "example@mail.ko",
+    "restData": "restData",
+    "__v": 0
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+}
+```
+
+3xx, 4xx
+```javascript
+{
+  "result": false,
+  "message": "Error message"
+}
+```
