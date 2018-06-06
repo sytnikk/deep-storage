@@ -211,6 +211,13 @@ http://localhost:3000/api/storage/?method=get_data&collection=importantcollectio
   ],
 }
 ```
+Or empty array
+```javascript
+{
+"result": true,
+"data": [],
+}
+```
 
 3xx, 4xx
 ```javascript
@@ -220,3 +227,92 @@ http://localhost:3000/api/storage/?method=get_data&collection=importantcollectio
 }
 ```
 
+## *Update data*
+
+#### Request
+Method | URL
+------------ | -------------
+GET/POST|http://localhost:3000/api/storage/?method=update_data
+
+#### Required data
+Type | Parameter | Value
+------------ | ------------- | -------------
+string | method | *update_data*
+string | collection | *"collectionName"*
+string | token | *"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"*
+string | id | *"5b17275555cc2403d0c9cb41"*
+
+#### Example (POST body)
+```javascript
+{
+  "method": "update_data",
+  "collection": "importantcollection",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.",
+  "id": "5b168186ea726b53a8d59890",
+  "newImportantData": "newVeryImportantData"
+ }
+```
+
+#### Example (GET url)
+http://localhost:3000/api/storage/?method=update_data&collection=importantcollection&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9&id=5b168186ea726b53a8d59890&newImportantData=newVeryImportantData
+
+#### Response
+200
+```javascript
+{
+  "result": true
+}
+```
+
+3xx, 4xx
+```javascript
+{
+  "result": false,
+  "message": "Error message"
+}
+```
+
+
+## *Delete data*
+
+#### Request
+Method | URL
+------------ | -------------
+GET/POST|http://localhost:3000/api/storage/?method=delete_data
+
+#### Required data
+Type | Parameter | Value
+------------ | ------------- | -------------
+string | method | *delete_data*
+string | collection | *"collectionName"*
+string | token | *"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"*
+string | id | *"5b17275555cc2403d0c9cb41"*
+
+#### Example (POST body)
+```javascript
+{
+  "method": "delete_data",
+  "collection": "importantcollection",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.",
+  "id": "5b168186ea726b53a8d59890"
+ }
+```
+
+#### Example (GET url)
+http://localhost:3000/api/storage/?method=delete_data&collection=importantcollection&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9&id=5b168186ea726b53a8d59890
+
+#### Response
+200
+```javascript
+{
+  "result": true
+}
+```
+
+3xx, 4xx
+```javascript
+{
+  "result": false,
+  "message": "Error message"
+}
+```
