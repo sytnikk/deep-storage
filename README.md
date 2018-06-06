@@ -36,7 +36,7 @@ You can add any parameters to the object
 http://localhost:3000/api/registration/?email=example@mail.ko&password=Qwerty123&restData=restData
 
 #### Response
-200 OK
+200
 ```javascript
 {
   "result": true,
@@ -49,3 +49,12 @@ http://localhost:3000/api/registration/?email=example@mail.ko&password=Qwerty123
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
 }
 ```
+
+3xx, 4xx
+```javascript
+{
+  "result": false,
+  "message": "Error message"
+}
+```
+
