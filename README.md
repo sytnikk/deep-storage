@@ -316,3 +316,14 @@ http://localhost:3000/api/storage/?method=delete_data&collection=importantcollec
   "message": "Error message"
 }
 ```
+## Install
+
+Clone project
+```git clone https://github.com/sytnikk/deep-storage.git```
+
+Run NodeJS driver 
+```npm run db```
+It will create db directory in your project
+
+And start server
+```npm run start```
